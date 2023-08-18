@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { ordersData, contextMenuItems, ordersGrid } from '../data/dummy';
@@ -18,15 +19,27 @@ import {
 } from '@syncfusion/ej2-react-grids';
 
 export default function Orders() {
+  const editing = { allowDeleting: true, allowEditing: true };
+
   return (
-    <div className='m-2 md:m-10 p-2 md:p-10 bg-white rounded-3xl'>
+    <div className='m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl'>
       <Header title='Orders' category='Page' />
-      <GridComponent>
+      <GridComponent
+        id='gridcomp'
+        dataSource={ordersData}
+        allowPaging
+        allowSorting
+        allowExcelExport
+        allowPdfExport
+        contextMenuItems={contextMenuItems}
+        editSettings={editing}
+      >
         <ColumnsDirective>
           {ordersGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
+        <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
       </GridComponent>
     </div>
   )
