@@ -2,7 +2,7 @@
 import React from 'react';
 import { areaCustomSeries, areaPrimaryYAxis, areaPrimaryXAxis } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
-import { Header } from '../../components';
+import { ChartsHeader } from '../../components';
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -18,7 +18,7 @@ export default function Area() {
 
   return (
     <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl'>
-      <Header title='Inflation Rate in Percentage' category='Area' />
+      <ChartsHeader title='Inflation Rate in Percentage' category='Area' />
       <ChartComponent
         id='area-chart'
         height='420px'

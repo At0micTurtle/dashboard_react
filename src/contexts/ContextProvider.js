@@ -42,11 +42,12 @@ export const ContextProvider = ({ children }) => {
         isClicked, setIsClicked,
         screenSize, setScreenSize,
         themeSettings, setThemeSettings,
-        currentColor,
-        currentMode,
+        currentColor, setCurrentColor,
+        currentMode, setCurrentMode,
         handleClick,
         setMode,
         setColor,
+        initialState
       }}>
       {children}
     </StateContext.Provider>
