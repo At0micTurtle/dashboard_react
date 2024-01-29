@@ -13,7 +13,7 @@
     "@syncfusion/ej2-react-inputs": "^22.2.9",
     "@syncfusion/ej2-react-kanban": "^22.2.9",
     "@syncfusion/ej2-react-popups": "^22.2.9",
-    "@syncfusion/ej2-react-richtexteditor": "^22.2.9",
+    "@syncfusion/ej2-react-richtexteditor": "^22.2.12",
     "@syncfusion/ej2-react-schedule": "^22.2.8",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
